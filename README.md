@@ -30,10 +30,10 @@ This project aims to demonstrate the end-to-end process of transforming raw Airb
       **Step 4: Choose the measures:** Listing count, Host count, Average Listing Price, and some calculated metrics that will be presented in more detail later in the work, specifically during the                 analysis of the cube.
 
 Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact.
-  
-   - Imported data into SQL Server.
-   
-   - Utilized various SQL queries for data transformation (highlight specific queries and their purposes).
+
+   **Date Dimension**
+    We run the code that generate the table for dates and loads date data through a looping process.
+   *We used only dates within the loop from 1-1-2007 to 31-12-2025. The reason for going back so far, despite the fact table covering the years 2023 and 2024, is that we identified the attribute       "host since" (indicating when the host became a member of Airbnb) in the host dimension with a minimum value of 2008. Therefore, in a potential connection between the host dimension and the date    dimension, the relevant date should exist.*
 
 
 Time Dimension

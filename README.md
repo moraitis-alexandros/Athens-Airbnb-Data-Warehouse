@@ -11,7 +11,7 @@ This project aims to demonstrate the end-to-end process of transforming raw Airb
 
 ## Project Overview:
 1. **Data Acquisition:** 
-   Obtained raw Airbnb data from [http://insideairbnb.com/] website. We focused only in the city of Athens and we downloaded three files in csv that included reservations from 27-03-23 until 23-03-24 as  above:
+   Obtained raw Airbnb data from [http://insideairbnb.com/] website. We focused only in the city of Athens and we downloaded three files in csv that included reservations from 27-03-23 until 23-03-24 as below:
    
     **Calendar data** file that stores daily reservations on airbnb platform (4.154.445 records)
 
@@ -29,7 +29,7 @@ This project aims to demonstrate the end-to-end process of transforming raw Airb
 
       **Step 4: Choose the measures:** Listing count, Host count, Average Listing Price, and some calculated metrics that will be presented in more detail later in the work, specifically during the                 analysis of the cube.
 
-Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as above:
+Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as below:
 
 ![Star Schema](images/star_schema.png)
 
@@ -138,10 +138,13 @@ FROM            dbo.Listing_Staging_Final
 ```
 
 4. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
-   - Developed an ETL pipeline to extract, transform, and load data into a star schema data warehouse.
-   - Implemented a star schema for optimized querying and analysis.
+   Developed an ETL pipeline to extract, transform, and load data into a star schema data warehouse as below:
+   ![ETL Pipeline](images/pipeline.png)
 
-5. **Visualization in Power BI:**
+   
+
+
+6. **Visualization in Power BI:**
    - Imported the transformed data into Power BI.
    - Created interactive visualizations and insightful
 

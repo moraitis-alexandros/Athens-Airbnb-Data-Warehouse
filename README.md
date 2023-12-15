@@ -54,7 +54,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
    Developed an ETL pipeline to extract, transform, load and update data  into a star schema data warehouse as below:
    
 <p align="center">
-  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/pipeline.png" >
+  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/pipeline2.png" >
 </p>
 
    After developing the pipeline it was time to create the OLAP Cube and we came up with the following metrics:

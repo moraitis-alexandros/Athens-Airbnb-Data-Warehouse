@@ -140,7 +140,21 @@ FROM            dbo.Listing_Staging_Final
 4. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
    Developed an ETL pipeline to extract, transform, load and update data  into a star schema data warehouse as below:
 
-   ![ETL Pipeline](images/pipeline.png)
+      ![ETL Pipeline](images/pipeline.png)
+
+   After developing the pipeline it was time to create the OLAP Cube and we came up with the following metrics:
+
+    **Sum_Price** → Sum of prices of the listings
+
+   **Fact Count** → Total number of facts (i.e., reservations) in the fact table
+
+   **Avg_Price** → Average prices per time interval for the listings
+
+   **Avg_Price_Per_Listing** → The average price of the listing for a specific month.
+
+   **Listing ID Distinct Count** → Total unique listings in the fact table
+
+   **Availability_of_Total_Listing_Percentage_Monthly**  Indicates the monthly occupancy percentage for each listing. We created this metric to facilitate easier comparisons in the following          visualizations.
 
    
 

@@ -50,32 +50,21 @@ Based on the above steps, in creating the database on the SQL server, we arrived
        [CalendarYear] [smallint] NOT NULL,
        [IsWeekend] [bit] NOT NULL,
        [IsLeapYear] [bit] NOT NULL,
- CONSTRAINT [PK_DimDate] PRIMARY KEY CLUSTERED
-(
+    CONSTRAINT [PK_DimDate] PRIMARY KEY CLUSTERED
+   (
        [DateKey] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-SET ANSI_PADDING OFF
-GO
-ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsWeekend]  DEFAULT ((0)) FOR [IsWeekend]
-GO
-ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsLeapYear]  DEFAULT ((0)) FOR [IsLeapYear]
-GO
+   )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+   ) ON [PRIMARY]
+   GO
+   SET ANSI_PADDING OFF
+   GO
+   ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsWeekend]  DEFAULT ((0)) FOR [IsWeekend]
+   GO
+   ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsLeapYear]  DEFAULT ((0)) FOR [IsLeapYear]   
+   GO
 
 
- CREATE TABLE [dbo].[DimTime](
-       [TimeKey] [int] NOT NULL,
-       [TimeAltKey] [time](0) NULL,
-       [HourOfDay] [tinyint] NULL,
-       [MinuteOfHour] [tinyint] NULL,
-       [SecondOfMinute] [tinyint] NULL,
-       [TimeString] [varchar](8) NULL,
- CONSTRAINT [PK_DimTime] PRIMARY KEY CLUSTERED
-(
-       [TimeKey] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+
 
 ```
   

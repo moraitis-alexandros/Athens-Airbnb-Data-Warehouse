@@ -47,7 +47,7 @@ This project aims to showcase the complete transformation process, starting from
 Based on the above steps, in creating the database on the SQL server, we arrived at the following: A database named ProjectDW with four dimension tables: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as below:
 
 <p align="center">
-  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/star_schema.png" >
+  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/star_schema2.png" >
 </p>
 
 3. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**

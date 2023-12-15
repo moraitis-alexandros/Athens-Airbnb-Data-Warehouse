@@ -29,7 +29,9 @@ This project aims to demonstrate the end-to-end process of transforming raw Airb
 
       **Step 4: Choose the measures:** Listing count, Host count, Average Listing Price, and some calculated metrics that will be presented in more detail later in the work, specifically during the                 analysis of the cube.
 
-Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact.
+Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as above:
+
+![Star Schema](images/star schema.png)
 
    **Date Dimension:**
     We run the code that generate the table for dates and loads date data through a looping process.

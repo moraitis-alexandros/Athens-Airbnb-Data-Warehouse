@@ -76,7 +76,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **How different amenities are distributed?**
    
-      ![How amenities distributed](images/amenitiesdistribution.png)
+      ![How amenities distributed](images/amenitiesdistribution2.png)
 
    **Conclusions**
    
@@ -88,7 +88,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **How metro amenity is distributed through listings?**
 
-   ![Metro Analysis](images/metroanalysis.png)
+   ![Metro Analysis](images/metroanalysis2.png)
 
    **Conclusions**
    
@@ -96,7 +96,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **What about Family Vacations?**
 
-      ![Family Vacations](images/familyvacations.png)
+      ![Family Vacations](images/familyvacations2.png)
 
    **Conclusions**
 
@@ -104,7 +104,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **Price Fluctuation**
 
-   ![Price Fluctuation](images/pricefluctuation.png)
+   ![Price Fluctuation](images/pricefluctuation2.png)
 
    **Conclusions**
 
@@ -120,7 +120,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **Top Hosts**
    
-    ![Top Hosts](images/tophosts.png)
+    ![Top Hosts](images/tophosts2.png)
 
    **Conclusions**
 

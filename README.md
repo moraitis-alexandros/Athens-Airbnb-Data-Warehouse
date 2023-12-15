@@ -1,28 +1,28 @@
-# Athens-Airbnb-Data-Warehouse
+## Athens Airbnb Data Warehouse
 I engineered a data warehouse in SQL Server utilizing Airbnb data for Athens, creating a robust pipeline to extract, clean, and transform data into a star schema for efficient querying. Additionally, I designed and implemented an OLAP cube to further analyze and aggregate the data, facilitating multidimensional analysis. These insights were then presented through Power BI visualizations, providing comprehensive analytics and actionable information.
 
-**Objective:**
+## Objective:
 This project aims to showcase the complete transformation process, starting from raw Airbnb data, culminating in a structured data warehouse, and the creation of insightful visualizations using Power BI, facilitated by an OLAP cube.
 
-**Tools Used:**
+## Tools Used:
 
-   *SQL Server* for data warehousing
+   **SQL Server** for data warehousing
 
-  *MS Visual Studio* for building the ETL pipeline
+  **MS Visual Studio** for building the ETL pipeline
 
-   *Power BI* for visualization and reporting
+  **OLAP Cube** integration for enhanced multidimensional analysis
+  
+  **Power BI** for visualization and reporting
 
-   *OLAP Cube* integration for enhanced multidimensional analysis
+## Key Highlights:
 
-**Key Highlights:**
+**Feature Engineering:** During the process, I conducted feature engineering to enhance the dataset, crafting new attributes that enriched the analytical potential of the stored data.
 
-*Feature Engineering:* During the process, I conducted feature engineering to enhance the dataset, crafting new attributes that enriched the analytical potential of the stored data.
+**Slowly Changing Dimensions (SCD):** Addressing the complexities of evolving data, I implemented SCD techniques, utilizing flagging mechanisms to handle changes effectively within the warehouse's dimensional structure.
 
-*Slowly Changing Dimensions (SCD):* Addressing the complexities of evolving data, I implemented SCD techniques, utilizing flagging mechanisms to handle changes effectively within the warehouse's dimensional structure.
+**Date Dimension Creation:** To ensure seamless data manipulation, I devised a date dimension generation mechanism employing looping strategies, facilitating comprehensive temporal analysis within the warehouse.
 
-*Date Dimension Creation:* To ensure seamless data manipulation, I devised a date dimension generation mechanism employing looping strategies, facilitating comprehensive temporal analysis within the warehouse.
-
-*For further detailed insights into the feature engineering, SCD handling, date dimension creation, interested readers are encouraged to refer to the details presented at the end of this report.*
+*For further detailed insights into the feature engineering, SCD handling, date dimension creation, interested readers are encouraged to refer to the in-depth insights presented at the end of this report.*
 
 ## Project Overview:
 1. **Data Acquisition:** 
@@ -50,7 +50,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
 
 
-4. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
+3. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
    Developed an ETL pipeline to extract, transform, load and update data  into a star schema data warehouse as below:
    
       ![ETL Pipeline](images/pipeline.png)
@@ -69,7 +69,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    *Availability_of_Total_Listing_Percentage_Monthly*  Indicates the monthly occupancy percentage for each listing. We created this metric to facilitate easier comparisons in the following          visualizations.
 
-6. **Visualization in Power BI:**
+4. **Visualization in Power BI:**
     Imported the cube into Power BI and created interactive and insightful visualizations.
 
    **How different amenities are distributed?**
@@ -96,11 +96,15 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
       ![Family Vacations](images/familyvacations.png)
 
+   **Conclusions**
+
    📌The above visualization serves as a guide for a family with children who want to make a reservation in Athens. Specifically, they select if they need toys and various amenities related to baby care, the number of rooms they want the apartment to have, and then they view on the map areas with the most bookings (in darker color) and those with fewer bookings. Naturally, they seek an area with fewer bookings (in lighter pink) to have a better chance of finding accommodation. Additionally, by clicking on the area, the corresponding price chart for that area is displayed, helping them find the month with the lowest average booking price. Moreover, hovering over an area displays the number of properties that have been booked. The map is dynamic in the sense that based on the user's selections (toys, baby stuff, bedrooms), the color changes accordingly. The price chart is similarly dynamic, changing with each selected area.
 
    **Price Fluctuation**
 
    ![Price Fluctuation](images/pricefluctuation.png)
+
+   **Conclusions**
 
    📌The commercial triangle is undoubtedly the area with the most bookings.
    
@@ -116,13 +120,15 @@ Based on the above steps, in creating the database on the SQL server, we arrived
    
     ![Top Hosts](images/tophosts.png)
 
+   **Conclusions**
+
    📌There are hosts generating over 1 million in revenue while simultaneously having over 40 properties. Essentially, this indicates that they are likely property management companies, entirely handling property management for the owner on the Airbnb platform. This corroborates the conclusion from the previous visualization, where we mentioned that Airbnb is not being used as much by individuals renting out their properties (for the days they won't use it) or their spare beds, but instead is evolving into a model closer to booking, more professionally oriented.
 
    📌Also, by examining the charts collectively for each host, we notice that those with fewer properties tend to have higher average prices for their properties.
 
    📌The top two hosts in terms of revenue (3 million and 1.7 million) demonstrate differences in how they achieve these earnings. Specifically, the first one utilizes a large number of properties (113 properties) with relatively moderate prices ($70 - $80), while the second one uses a much lower number of properties (42) with significantly higher prices ($130 - $160).
    
-**In-depth Insights:**
+## In-depth Insights:
 
    **Date Dimension Creation:**
     We run the code that generate the table for dates and loads date data through a looping process.
@@ -227,5 +233,11 @@ We noticed that the "amenities" attribute (text) contained all amenities in conc
                          [description] LIKE '%fireplace%' THEN 1 ELSE 0 END) AS Fireplace
 FROM            dbo.Listing_Staging_Final
 ```
-   
+
+## References
+*Inspired by [Airbnb Data Science Project](https://mohamedirfansh.github.io/Airbnb-Data-Science-Project/)*
+*Kimball, R., & Caserta, J. (2004). The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming, and Delivering Data. Wiley.*
+*Knight, B., Veerman, E., Moss, J. M., & Davis, M. (2012). Professional Microsoft SQL Server 2012 Integration Services. Wrox.*
+
+
 

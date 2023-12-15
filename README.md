@@ -171,3 +171,44 @@ FROM            dbo.Listing_Staging_Final
    
    📌Most listings are rented by 4 or fewer people, as the largest number of listings have 1 bed, followed immediately by 2. This may indicate a preference for the platform by solo travelers,   couples, and small families for rental purposes.
 
+   **How metro amenity is distributed through listings?**
+
+   ![Metro Analysis](images/metroanalysis.png)
+
+   **Conclusions**
+   
+   📌Combining the two charts above, I understand that the keyword "metro" doesn't significantly affect the number of bookings, as most bookings occur without the keyword. However, it's worth noting that among the areas where the keyword isn't mentioned, the top three areas with the most listings are those that actually have a metro nearby (Plaka, Exarchia, Koukaki). This indicates that the respective host might not have considered the keyword when composing the description, possibly assuming that since it's Athens, there's a metro almost everywhere.
+
+   **What about Family Vacations?**
+
+      ![Family Vacations](images/familyvacations.png)
+
+   📌The above visualization serves as a guide for a family with children who want to make a reservation in Athens. Specifically, they select if they need toys and various amenities related to baby care, the number of rooms they want the apartment to have, and then they view on the map areas with the most bookings (in darker color) and those with fewer bookings. Naturally, they seek an area with fewer bookings (in lighter pink) to have a better chance of finding accommodation. Additionally, by clicking on the area, the corresponding price chart for that area is displayed, helping them find the month with the lowest average booking price. Moreover, hovering over an area displays the number of properties that have been booked. The map is dynamic in the sense that based on the user's selections (toys, baby stuff, bedrooms), the color changes accordingly. The price chart is similarly dynamic, changing with each selected area.
+
+   **Price Fluctuation**
+
+   ![Price Fluctuation](images/pricefluctuation.png)
+
+   📌The commercial triangle is undoubtedly the area with the most bookings.
+   
+   📌The most expensive area (with the highest average price) is Zappeio.
+   
+   📌For cheaper prices, it would be better to consider months outside the period of June to August.
+   
+   📌High prices in areas result in a small percentage of bookings. Conversely, when prices are lower (outside the June to August period), booking percentages are higher.
+   
+   📌There is a large percentage of people planning their vacations at least six months in advance. There is an increase in bookings from September 2023 onwards.
+
+   **Top Hosts**
+   
+    ![Top Hosts](images/tophosts.png)
+
+   📌There are hosts generating over 1 million in revenue while simultaneously having over 40 properties. Essentially, this indicates that they are likely property management companies, entirely handling property management for the owner on the Airbnb platform. This corroborates the conclusion from the previous visualization, where we mentioned that Airbnb is not being used as much by individuals renting out their properties (for the days they won't use it) or their spare beds, but instead is evolving into a model closer to booking, more professionally oriented.
+
+   📌Also, by examining the charts collectively for each host, we notice that those with fewer properties tend to have higher average prices for their properties.
+
+   📌The top two hosts in terms of revenue (3 million and 1.7 million) demonstrate differences in how they achieve these earnings. Specifically, the first one utilizes a large number of properties (113 properties) with relatively moderate prices ($70 - $80), while the second one uses a much lower number of properties (42) with significantly higher prices ($130 - $160).
+   
+
+   
+

@@ -33,6 +33,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **Date Dimension**
     We run the code that generate the table for dates and loads date data through a looping process.
+  
    *We used only dates within the loop from 1-1-2007 to 31-12-2025. The reason for going back so far, despite the fact table covering the years 2023 and 2024, is that we identified the attribute       "host since" (indicating when the host became a member of Airbnb) in the host dimension with a minimum value of 2008. Therefore, in a potential connection between the host dimension and the date    dimension, the relevant date should exist.*
 
 

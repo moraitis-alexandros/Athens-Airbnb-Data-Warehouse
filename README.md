@@ -156,11 +156,13 @@ FROM            dbo.Listing_Staging_Final
 
    **Availability_of_Total_Listing_Percentage_Monthly**  Indicates the monthly occupancy percentage for each listing. We created this metric to facilitate easier comparisons in the following          visualizations.
 
-   
-
-
 6. **Visualization in Power BI:**
-   - Imported the transformed data into Power BI.
-   - Created interactive visualizations and insightful
+    Imported the cube into Power BI and created interactive and insightful visualizations.
 
+      ![How amenities are distributed](images/amenitiesdistribution.png)
+
+   Coclusions
+   The more bedrooms I search for in a property, the higher the average price of the property will be.
+   Athens is not particularly pet-friendly, as a large percentage (83.4%) of properties do not allow pets.
+Most listings are rented by 4 or fewer people, as the largest number of listings have 1 bed, followed immediately by 2. This may indicate a preference for the platform by solo travelers, couples, and small families for rental purposes.
 

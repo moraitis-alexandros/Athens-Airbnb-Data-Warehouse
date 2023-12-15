@@ -1,4 +1,4 @@
-## Athens Airbnb Data Warehouse
+## Athens Airbnb Data Warehouse & Insights: SQL Transformation, ETL Pipeline and Power BI Visualization:
 I engineered a data warehouse in SQL Server utilizing Airbnb data for Athens, creating a robust pipeline to extract, clean, and transform data into a star schema for efficient querying. Additionally, I designed and implemented an OLAP cube to further analyze and aggregate the data, facilitating multidimensional analysis. These insights were then presented through Power BI visualizations, providing comprehensive analytics and actionable information.
 
 ## Objective:

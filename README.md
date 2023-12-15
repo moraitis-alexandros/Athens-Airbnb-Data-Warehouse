@@ -35,7 +35,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
     We run the code that generate the table for dates and loads date data through a looping process.
 
     ```sql
--- CREATE TABLE [dbo].[DimDate](
+    CREATE TABLE [dbo].[DimDate](
        [DateKey] [int] NOT NULL,
        [FullDateAlternateKey] [date] NOT NULL,
        [DateString] [varchar](10) NULL, /*date evala*/

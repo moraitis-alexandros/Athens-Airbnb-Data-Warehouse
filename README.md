@@ -236,7 +236,9 @@ FROM            dbo.Listing_Staging_Final
 
 ## References
 *Inspired by [Airbnb Data Science Project](https://mohamedirfansh.github.io/Airbnb-Data-Science-Project/)*
+
 *Kimball, R., & Caserta, J. (2004). The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming, and Delivering Data. Wiley.*
+
 *Knight, B., Veerman, E., Moss, J. M., & Davis, M. (2012). Professional Microsoft SQL Server 2012 Integration Services. Wrox.*
 
 

@@ -33,6 +33,51 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    **Date Dimension**
     We run the code that generate the table for dates and loads date data through a looping process.
+
+    ```sql
+-- CREATE TABLE [dbo].[DimDate](
+       [DateKey] [int] NOT NULL,
+       [FullDateAlternateKey] [date] NOT NULL,
+       [DateString] [varchar](10) NULL, /*date evala*/
+       [DayOfWeek] [tinyint] NOT NULL,
+       [DayOfWeekName] [nvarchar](10) NOT NULL,
+       [DayOfMonth] [tinyint] NOT NULL,
+       [DayOfYear] [smallint] NOT NULL,
+       [WeekOfYear] [tinyint] NOT NULL,
+       [MonthName] [nvarchar](10) NOT NULL,
+       [MonthOfYear] [tinyint] NOT NULL,
+       [CalendarQuarter] [tinyint] NOT NULL,
+       [CalendarYear] [smallint] NOT NULL,
+       [IsWeekend] [bit] NOT NULL,
+       [IsLeapYear] [bit] NOT NULL,
+ CONSTRAINT [PK_DimDate] PRIMARY KEY CLUSTERED
+(
+       [DateKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+SET ANSI_PADDING OFF
+GO
+ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsWeekend]  DEFAULT ((0)) FOR [IsWeekend]
+GO
+ALTER TABLE [dbo].[DimDate] ADD  CONSTRAINT [DF_DimDate_IsLeapYear]  DEFAULT ((0)) FOR [IsLeapYear]
+GO
+
+
+ CREATE TABLE [dbo].[DimTime](
+       [TimeKey] [int] NOT NULL,
+       [TimeAltKey] [time](0) NULL,
+       [HourOfDay] [tinyint] NULL,
+       [MinuteOfHour] [tinyint] NULL,
+       [SecondOfMinute] [tinyint] NULL,
+       [TimeString] [varchar](8) NULL,
+ CONSTRAINT [PK_DimTime] PRIMARY KEY CLUSTERED
+(
+       [TimeKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+```
   
    *We used only dates within the loop from 1-1-2007 to 31-12-2025. The reason for going back so far, despite the fact table covering the years 2023 and 2024, is that we identified the attribute       "host since" (indicating when the host became a member of Airbnb) in the host dimension with a minimum value of 2008. Therefore, in a potential connection between the host dimension and the date    dimension, the relevant date should exist.*
 

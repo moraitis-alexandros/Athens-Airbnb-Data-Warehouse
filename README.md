@@ -31,7 +31,7 @@ This project aims to demonstrate the end-to-end process of transforming raw Airb
 
 Based on the above steps, in creating the database on the SQL server, we arrived at the following:A database named ProjectDW, four dimension tables as follows: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as above:
 
-![Star Schema](images/star schema.png)
+![Star Schema](images/pipeline.png)
 
    **Date Dimension:**
     We run the code that generate the table for dates and loads date data through a looping process.

@@ -139,7 +139,7 @@ FROM            dbo.Listing_Staging_Final
 
 4. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
    Developed an ETL pipeline to extract, transform, load and update data  into a star schema data warehouse as below:
-
+   
       ![ETL Pipeline](images/pipeline.png)
 
    After developing the pipeline it was time to create the OLAP Cube and we came up with the following metrics:
@@ -159,10 +159,12 @@ FROM            dbo.Listing_Staging_Final
 6. **Visualization in Power BI:**
     Imported the cube into Power BI and created interactive and insightful visualizations.
 
-      ![How amenities are distributed](images/amenitiesdistribution.png)
+      ![How amenities distributed](images/amenitiesdistribution.png)
 
-   Coclusions
-   The more bedrooms I search for in a property, the higher the average price of the property will be.
-   Athens is not particularly pet-friendly, as a large percentage (83.4%) of properties do not allow pets.
-Most listings are rented by 4 or fewer people, as the largest number of listings have 1 bed, followed immediately by 2. This may indicate a preference for the platform by solo travelers, couples, and small families for rental purposes.
+   **Coclusions**
+   
+   📌The more bedrooms I search for in a property, the higher the average price of the property will be.
+   📌Athens is not particularly pet-friendly, as a large percentage (83.4%) of properties do not allow pets.
+   📌Most listings are rented by 4 or fewer people, as the largest number of listings have 1 bed, followed immediately by 2. This may indicate a preference for the platform by solo travelers,    
+     couples, and small families for rental purposes.
 

@@ -135,14 +135,7 @@ We noticed that the "amenities" attribute (text) contained all amenities in conc
 FROM            dbo.Listing_Staging_Final
 ```
 
-
-
-
-
-
-
-
-4. **ETL Pipeline Creation in MS Visual Studio:**
+4. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
    - Developed an ETL pipeline to extract, transform, and load data into a star schema data warehouse.
    - Implemented a star schema for optimized querying and analysis.
 

@@ -64,9 +64,10 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    *We used only dates within the loop from 1-1-2007 to 31-12-2025. The reason for going back so far, despite the fact table covering the years 2023 and 2024, is that we identified the attribute       "host since" (indicating when the host became a member of Airbnb) in the host dimension with a minimum value of 2008. Therefore, in a potential connection between the host dimension and the date    dimension, the relevant date should exist.*
 
+   **Flags and Slowly Changing Dimensions** 
+    Based on the operational scenario, the initial scrape took place on 27-03-23, gathering reservations for listings over a year. However, subsequent scrapes might cause changes in t"availability"    attribute. This change could occur if a booking was made for the same date and listing, altering the attribute from 1 (availability = true) to 0 (availability = false). How we handle such a         scenario? It was identified as a *slowly changing dimension problem*. Initially, the thought was to simply overwrite the availability attribute. Yet, it became evident that this approach would       result in the loss of valuable information regarding the availability changes for each property. Therefore, a decision was made to create two new columns in the pseudo table: "timestamp" and       "flag". The "timestamp" column recorded the date of entry for the records, while the "flag" column indicated active records, marking the most recent changes (flagged with 1 based on the             timestamp). Consequently, in future scenarios where it's necessary to track the evolution of availability over time, considering scrape dates, this information would be stored in the calendar       dimension.
 
-Time Dimension
-Flag 
+
 Feature Creation
 
 

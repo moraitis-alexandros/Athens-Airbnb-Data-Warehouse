@@ -46,14 +46,16 @@ This project aims to showcase the complete transformation process, starting from
 
 Based on the above steps, in creating the database on the SQL server, we arrived at the following: A database named ProjectDW with four dimension tables: Date Dimension named date_dim, Listing Dimension named listing dim, Host Dimension named host dim, Neighborhood Dimension named neighborhood dim. Finally we came up with a fact table named listings booking fact. The whole process resulted a star schema data warehouse as below:
 
-![Star Schema](images/star_schema.png)
-
-
+<p align="center">
+  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/star_schema.png" >
+</p>
 
 3. **ETL Pipeline and OLAP Cube Creation in MS Visual Studio:**
    Developed an ETL pipeline to extract, transform, load and update data  into a star schema data warehouse as below:
    
-      ![ETL Pipeline](images/pipeline.png)
+<p align="center">
+  <img src="https://github.com/moraitis-alexandros/Athens-Airbnb-Data-Warehouse/blob/main/images/pipeline.png" >
+</p>
 
    After developing the pipeline it was time to create the OLAP Cube and we came up with the following metrics:
 
@@ -69,7 +71,7 @@ Based on the above steps, in creating the database on the SQL server, we arrived
 
    *Availability_of_Total_Listing_Percentage_Monthly*  Indicates the monthly occupancy percentage for each listing. We created this metric to facilitate easier comparisons in the following          visualizations.
 
-4. **Visualization in Power BI:**
+5. **Visualization in Power BI:**
     Imported the cube into Power BI and created interactive and insightful visualizations.
 
    **How different amenities are distributed?**
